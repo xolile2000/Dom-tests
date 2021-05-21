@@ -9,9 +9,9 @@ function BillWithSettings(){
      function setCallCost(callCost){
          theCallCost = callCost;
      }
-     function getCallCost(){
+        function getCallCost(){
          return theCallCost;
-     }
+     } 
      function setSmsCost(smsCost){
         theSmsCost = smsCost;
     }
@@ -33,7 +33,7 @@ function BillWithSettings(){
     }
 
     function makeCall(){
-        if(hasReachedCriticalLevel()){
+        if(!hasReachedCriticalLevel()){
             callCostTotal += theCallCost; 
         }
         
@@ -50,7 +50,7 @@ function BillWithSettings(){
     }
 
     function sendSms(){
-        if(hasReachedCriticalLevel()){
+        if(!hasReachedCriticalLevel()){
             smsCostTotal += theSmsCost;
         }
          
@@ -89,7 +89,7 @@ function BillWithSettings(){
          getTotalSmsCost,
          sendSms,
          totalClassName,
-         hasReachedCriticalLevel
+        //  hasReachedCriticalLevel
          
          
          
